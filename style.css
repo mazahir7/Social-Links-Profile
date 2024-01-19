@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --color-primary: hsl(75, 94%, 57%);
+
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  background-color: var(--off-black);
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.profile-card {
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2.2rem;
+  text-align: center;
+  border-radius: 14px;
+  margin: 1rem 0;
+}
+
+.image {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.image img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.name {
+  letter-spacing: .8px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.location {
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.para {
+  margin: 1.8rem 0;
+  font-size: 1.4rem;
+  color: rgb(201, 201, 201);
+  font-weight: 300;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  min-width: 30rem;
+  margin: 1rem 0;
+}
+
+.socials a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: inherit;
+  background-color: var(--grey);
+  width: 90%;
+  padding: 1rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.socials a:hover {
+  color: var(--off-black);
+  background-color: var(--color-primary);
+}
+
+.socials a:active {
+  transform: scale(.98);
+}
+
+
+@media (max-width: 22em) {
+  .socials {
+    min-width: 24rem;
+  }
+}
